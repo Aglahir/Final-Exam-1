@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
-function Book( props ){
-    return(
-        <div>
-            {/*
-                Your code goes here
-            */}
-        </div>
-    );
+function Book(props) {
+  return (
+    <div>
+      {props.req.items.map((value, index) => {
+        return <p>{value.volumeInfo.title}</p>;
+      })}
+    </div>
+  );
 }
 
 export default Book;
